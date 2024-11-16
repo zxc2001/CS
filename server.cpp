@@ -45,7 +45,7 @@ int main(){
         char buffer[1024];
         int len=recv(cfd,buffer,sizeof(buffer),0);
         if(len>0){
-            std::cout<<buffer<<std::endl;
+            std::cout<<buffer;
             send(cfd,buffer,len,0);
             memset(buffer,0,sizeof(buffer));
         }else if(len==0){
